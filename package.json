@@ -1,14 +1,15 @@
 {
-  "name": "electron-quick-start",
+  "name": "noha-desktop-app",
   "version": "1.0.0",
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "compile": "browserify -t [ babelify --presets [ react es2015 ] ] src/app.js -o js/app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/electron/electron-quick-start.git"
+    "url": "git+https://github.com/zafaralam/noha-desktop-app.git"
   },
   "keywords": [
     "Electron",
@@ -16,13 +17,24 @@
     "start",
     "tutorial"
   ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "Zafar Alam",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/electron/electron-quick-start/issues"
+    "url": "https://github.com/zafaralam/noha-desktop-app/issues"
   },
-  "homepage": "https://github.com/electron/electron-quick-start#readme",
+  "homepage": "https://github.com/zafaralam/noha-desktop-app#readme",
   "devDependencies": {
-    "electron": "^1.3.4"
+    "electron": "^1.3.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1"
+  },
+  "dependencies": {
+    "node-soundcloud": "0.0.5",
+    "react": "^0.14.8",
+    "react-dom": "^0.14.8",
+    "react-loading": "0.0.9",
+    "react-soundplayer": "^0.3.6"
   }
 }
